@@ -1,0 +1,17 @@
+Enter new user information
+
+<%= form_for @user do |u| %>
+  First Name <%= u.text_field :first_name %><br/>
+  Last Name <%= u.text_field :last_name %><br/>
+  Email Address <%= u.text_field :email_address %><br/>
+  <%= u.submit %>
+<% end %>
+
+<hr>
+Display all of our users
+<% if !@users.blank? %>
+  <% for item in @users %>
+  <% item.first_name%> <% item.last_name%>
+  <% end %>
+  <% else %>
+<%end%>

@@ -1,0 +1,32 @@
+<h1>I give you, the first users of Optin</h1>
+
+
+<aside>
+    Used to hold sidebar sections that are tangentially related to the content
+</aside>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.first_name %> "no middle name" <%= user.last_name %></li>
+    <li>This is their birthday: <%= user.birthday %> and here is their hair color: <%= user.hair_color%></li>
+    <%= link_to "See this user details", user_url(user), method: :get %>
+    <br>
+  <% end %>
+</ul>
+<h2> Now let's add some more text and possibly a picture below to light the way</h2>
+
+<figure>
+    Holds images, graphic content, code samples etc.
+    <img src = "https://yieldtalk.com/wp-content/uploads/2017/03/fundthatflip.jpg"/>
+</figure>
+
+<form action="" method="get">
+    <label for= "GET-name">Check on the newest investments</label>
+    <input type="GET-name" type= text name="name">
+    <input type="submit" value="save">
+</form>
+
+<%= link_to "Add a book", "/books/new" %>
+
+<article>
+    Used to hold content that makes sense on its own like Posts or Comments
+</article>
